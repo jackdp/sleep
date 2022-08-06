@@ -284,7 +284,7 @@ begin
   begin
     sNum := Cmd.UnknownParams[i].ParamStr;
 
-    if not TryGetMilliseconds(sNum, ms) then
+    if not TryGetMilliseconds(sNum, ms, tuSecond) then // Dodałem tuSecond. Zmiany w JPL.Conversion 2022.08.06
     begin
       DisplayError('Invalid time interval value: ' + sNum);
       ExitCode := TConsole.ExitCodeError;
